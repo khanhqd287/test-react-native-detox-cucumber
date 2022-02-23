@@ -5,11 +5,8 @@
   "apps": {
     "ios": {
       "type": "ios.app",
-      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY"
-    },
-    "android": {
-      "type": "android.apk",
-      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY"
+      "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/test_cucumber_detox.app",
+      "build": "xcodebuild -workspace ios/test_cucumber_detox.xcworkspace -scheme test_cucumber_detox -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build"
     }
   },
   "devices": {
@@ -18,22 +15,12 @@
       "device": {
         "type": "iPhone 11"
       }
-    },
-    "emulator": {
-      "type": "android.emulator",
-      "device": {
-        "avdName": "Pixel_3a_API_30_x86"
-      }
     }
   },
   "configurations": {
     "ios": {
       "device": "simulator",
       "app": "ios"
-    },
-    "android": {
-      "device": "emulator",
-      "app": "android"
     }
   }
 }
